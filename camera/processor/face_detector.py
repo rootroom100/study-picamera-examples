@@ -44,7 +44,7 @@ class FaceDetector(object):
 
             #　フレームに文字列を表示させる。
             font = cv2.FONT_HERSHEY_SIMPLEX
-            cv2.putText(frame,'TESTTEXT',(x,y+h), font, 1,(255,255,255),2,cv2.LINE_AA,True)
+            cv2.putText(frame,'TESTTEXT',(x,y+h), font, 1,(255,255,255),2,cv2.LINE_AA,False)
 
         # frameを戻り値として返す
         return frame
