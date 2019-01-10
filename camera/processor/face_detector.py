@@ -21,7 +21,8 @@ class FaceDetector(object):
         if self.flip:
             return np.flip(frame, 0)
         return frame
-
+    
+    #カメラから画像を取得してjpgに変換
     def get_frame(self):
         frame = self.flip_if_needed(self.vs.read())
         frame = self.process_image(frame)
@@ -43,7 +44,7 @@ class FaceDetector(object):
 
             #　フレームに文字列を表示させる。
             font = cv2.FONT_HERSHEY_SIMPLEX
-            cv2.putText(img,'TESTTEXT',(10,500), font, 4,(255,255,255),2,cv2.LINE_AA)
+            cv2.putText(frame,'TESTTEXT',(x,y+h), font, 4,(255,255,255),2,cv2.LINE_AA)
 
         # frameを戻り値として返す
         return frame
